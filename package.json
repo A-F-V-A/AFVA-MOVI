@@ -1,0 +1,19 @@
+{
+  "name": "afva-movi",
+  "version": "1.0.0",
+  "description": "Consumo de Api con javaScript vanilla",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A-F-V-A/AFVA-MOVI.git"
+  },
+  "author": "@AFVA .-.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/A-F-V-A/AFVA-MOVI/issues"
+  },
+  "homepage": "https://github.com/A-F-V-A/AFVA-MOVI#readme"
+}

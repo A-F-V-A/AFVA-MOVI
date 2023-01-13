@@ -1,7 +1,22 @@
 :root{
     --color-primary: #090911;
 }
+*{
+    box-sizing: border-box;
+}
+
+html{
+    background-color: var(--color-primary);
+}
 
 body{
     background-color: var(--color-primary);
 }
+
+/* Utilidad */
+.inactive{
+    display: none;
+}
+/* General */
+
+/* Responsive */

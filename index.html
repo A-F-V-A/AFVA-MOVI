@@ -9,6 +9,8 @@
     <!-- Style -->
     <link rel="stylesheet" href="./style/styale.css">
 
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <!-- Fonsts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,290 +21,44 @@
 </head>
 
 <body>
+
     <header>
-        <nav>
-            <div class="logo">
-                <img src="./img/afva-movi.svg" alt="Logo">
-            </div>
-            <div class="menu">
-                <a href="#">Streaming</a>
-                <a href="#">Movies</a>
-                <a href="#">In Theaters</a>
-                <div class="socialMedia">
-                    <i class="fa-brands fa-github"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                </div>
-            </div>
-            <div class="bar">
-                <div class="bar-line-1"></div>
-                <div class="bar-line-2"></div>
-                <div class="bar-line-3"></div>
+        <nav class="nav-main">
+            <a href="#" class="logo">
+                <img src="./img/afva-movi.svg" alt="">
+            </a>
+            <ul class="nav-list">
+                <li><a href="#home" class="active">home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+            <div class="menu-icono">
+                <div class="menu-icono-line-1"></div>
+                <div class="menu-icono-line-2"></div>
+                <div class="menu-icono-line-3"></div>
             </div>
         </nav>
-        <div class="nav-mobile inactive">
-            <a href="#">Streaming</a>
-            <a href="#">Movies</a>
-            <a href="#">In Theaters</a>
-            <div class="socialMedia">
-                <div class="mobile-social">
-                    <i class="fa-brands fa-github"></i>
-                    <i class="fa-brands fa-instagram"></i>
+        <section class="home container" id="home">
+            <div class="home-text">
+                <div class="slide">
+                    <span class="one">#1</span>
+                    <span class="two">En tedencia</span>
                 </div>
-                <div class="logo">
-                    <img width="100px" src="./img/tm-db.svg" alt="">
-                </div>
-            </div>
-        </div>
-        <section class="trend">
-            <div class="capa">
-                <div class="container">
-                    <div class="movi-trend">
-                        <div class="card small">
-                            <div class="movi">
-                                <img src="https://media.ambito.com/p/152f681546583725e98cdfb1611c4520/adjuntos/239/imagenes/040/319/0040319054/730x0/smart/espec-merlina_optjpeg.jpeg"
-                                    alt="">
-                            </div>
-                            <h4 class="title inactive">Card Title</h4>
-                            <div class="info inactive">
-                                <h5>YYYY</h5>
-                                <div class="box">
-                                    <i class="fa-regular fa-eye"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="movi-info">
-                            <h2>Title Movi</h2>
-                            <div class="details">
-                                <div class="inner">
-                                    <div class="number" id="">65%</div>
-                                </div>
-                                <h3 class="number">1h 38min 2022</h3>
-                            </div>
-                            <p>Mientras asiste a la Academia Nevermore, Merlina Addams intenta dominar su incipiente
-                                habilidad psíquica, frustrar una ola de asesinatos y resolver el misterio que involucró a
-                                sus padres 25 años atrás..</p>
-                        </div>
-                    </div>
+                <h1>NAME MOVI</h1>
+                <h3>Ene 20 2023</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, quasi saepe aliquam excepturi
+                    tempora assumenda!</p>
+                <div class="button">
+                    <a href="#" class="btn">Ver mas</a>
+                    <a href="#" class="btn-round"><span><i class='bx bx-play'></i></span>Play Trailer</a>
                 </div>
             </div>
         </section>
     </header>
-    <main>
-        <section id="trend-movi">
-            <div class="container">
-                <h2>Tedencias</h2>
-                <div class="trend-movi">
-                    <div class="card small">
-                        <div class="movi">
-                            <img src="https://media.ambito.com/p/152f681546583725e98cdfb1611c4520/adjuntos/239/imagenes/040/319/0040319054/730x0/smart/espec-merlina_optjpeg.jpeg"
-                                alt="">
-                        </div>
-                        <h4 class="title">Card Title</h4>
-                        <div class="info">
-                            <h5>YYYY</h5>
-                            <div class="box">
-                                <i class="fa-regular fa-eye"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="card small">
-                        <div class="movi">
-                            <img src="https://media.ambito.com/p/152f681546583725e98cdfb1611c4520/adjuntos/239/imagenes/040/319/0040319054/730x0/smart/espec-merlina_optjpeg.jpeg"
-                                alt="">
-                        </div>
-                        <h4 class="title">Card Title</h4>
-                        <div class="info">
-                            <h5>YYYY</h5>
-                            <div class="box">
-                                <i class="fa-regular fa-eye"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="card small">
-                        <div class="movi">
-                            <img src="https://media.ambito.com/p/152f681546583725e98cdfb1611c4520/adjuntos/239/imagenes/040/319/0040319054/730x0/smart/espec-merlina_optjpeg.jpeg"
-                                alt="">
-                        </div>
-                        <h4 class="title">Card Title</h4>
-                        <div class="info">
-                            <h5>YYYY</h5>
-                            <div class="box">
-                                <i class="fa-regular fa-eye"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="card small">
-                        <div class="movi">
-                            <img src="https://media.ambito.com/p/152f681546583725e98cdfb1611c4520/adjuntos/239/imagenes/040/319/0040319054/730x0/smart/espec-merlina_optjpeg.jpeg"
-                                alt="">
-                        </div>
-                        <h4 class="title">Card Title</h4>
-                        <div class="info">
-                            <h5>YYYY</h5>
-                            <div class="box">
-                                <i class="fa-regular fa-eye"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="card small">
-                        <div class="movi">
-                            <img src="https://media.ambito.com/p/152f681546583725e98cdfb1611c4520/adjuntos/239/imagenes/040/319/0040319054/730x0/smart/espec-merlina_optjpeg.jpeg"
-                                alt="">
-                        </div>
-                        <h4 class="title">Card Title</h4>
-                        <div class="info">
-                            <h5>YYYY</h5>
-                            <div class="box">
-                                <i class="fa-regular fa-eye"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="card small">
-                        <div class="movi">
-                            <img src="https://media.ambito.com/p/152f681546583725e98cdfb1611c4520/adjuntos/239/imagenes/040/319/0040319054/730x0/smart/espec-merlina_optjpeg.jpeg"
-                                alt="">
-                        </div>
-                        <h4 class="title">Card Title</h4>
-                        <div class="info">
-                            <h5>YYYY</h5>
-                            <div class="box">
-                                <i class="fa-regular fa-eye"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="card small">
-                        <div class="movi">
-                            <img src="https://media.ambito.com/p/152f681546583725e98cdfb1611c4520/adjuntos/239/imagenes/040/319/0040319054/730x0/smart/espec-merlina_optjpeg.jpeg"
-                                alt="">
-                        </div>
-                        <h4 class="title">Card Title</h4>
-                        <div class="info">
-                            <h5>YYYY</h5>
-                            <div class="box">
-                                <i class="fa-regular fa-eye"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-            <div class="container">
-                <h2>Estrenos</h2>
-                <div class="trend-movi">
-                    <div class="card small">
-                        <div class="movi">
-                            <img src="https://media.ambito.com/p/152f681546583725e98cdfb1611c4520/adjuntos/239/imagenes/040/319/0040319054/730x0/smart/espec-merlina_optjpeg.jpeg"
-                                alt="">
-                        </div>
-                        <h4 class="title">Card Title</h4>
-                        <div class="info">
-                            <h5>YYYY</h5>
-                            <div class="box">
-                                <i class="fa-regular fa-eye"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="card small">
-                        <div class="movi">
-                            <img src="https://media.ambito.com/p/152f681546583725e98cdfb1611c4520/adjuntos/239/imagenes/040/319/0040319054/730x0/smart/espec-merlina_optjpeg.jpeg"
-                                alt="">
-                        </div>
-                        <h4 class="title">Card Title</h4>
-                        <div class="info">
-                            <h5>YYYY</h5>
-                            <div class="box">
-                                <i class="fa-regular fa-eye"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="card small">
-                        <div class="movi">
-                            <img src="https://media.ambito.com/p/152f681546583725e98cdfb1611c4520/adjuntos/239/imagenes/040/319/0040319054/730x0/smart/espec-merlina_optjpeg.jpeg"
-                                alt="">
-                        </div>
-                        <h4 class="title">Card Title</h4>
-                        <div class="info">
-                            <h5>YYYY</h5>
-                            <div class="box">
-                                <i class="fa-regular fa-eye"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="card small">
-                        <div class="movi">
-                            <img src="https://media.ambito.com/p/152f681546583725e98cdfb1611c4520/adjuntos/239/imagenes/040/319/0040319054/730x0/smart/espec-merlina_optjpeg.jpeg"
-                                alt="">
-                        </div>
-                        <h4 class="title">Card Title</h4>
-                        <div class="info">
-                            <h5>YYYY</h5>
-                            <div class="box">
-                                <i class="fa-regular fa-eye"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="card small">
-                        <div class="movi">
-                            <img src="https://media.ambito.com/p/152f681546583725e98cdfb1611c4520/adjuntos/239/imagenes/040/319/0040319054/730x0/smart/espec-merlina_optjpeg.jpeg"
-                                alt="">
-                        </div>
-                        <h4 class="title">Card Title</h4>
-                        <div class="info">
-                            <h5>YYYY</h5>
-                            <div class="box">
-                                <i class="fa-regular fa-eye"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="card small">
-                        <div class="movi">
-                            <img src="https://media.ambito.com/p/152f681546583725e98cdfb1611c4520/adjuntos/239/imagenes/040/319/0040319054/730x0/smart/espec-merlina_optjpeg.jpeg"
-                                alt="">
-                        </div>
-                        <h4 class="title">Card Title</h4>
-                        <div class="info">
-                            <h5>YYYY</h5>
-                            <div class="box">
-                                <i class="fa-regular fa-eye"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="card small">
-                        <div class="movi">
-                            <img src="https://media.ambito.com/p/152f681546583725e98cdfb1611c4520/adjuntos/239/imagenes/040/319/0040319054/730x0/smart/espec-merlina_optjpeg.jpeg"
-                                alt="">
-                        </div>
-                        <h4 class="title">Card Title</h4>
-                        <div class="info">
-                            <h5>YYYY</h5>
-                            <div class="box">
-                                <i class="fa-regular fa-eye"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-        </section>
-        <section id="explora">
-            <div class="capa"></div>
-        </section>
-        <section id="gender"></section>
-    </main>
-    <footer></footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.3/axios.min.js" integrity="sha512-L4lHq2JI/GoKsERT8KYa72iCwfSrKYWEyaBxzJeeITM9Lub5vlTj8tufqYk056exhjo2QDEipJrg6zen/DDtoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://kit.fontawesome.com/2d97acca8a.js" crossorigin="anonymous"></script>
     <script type="module" src="./src/main.js"></script>
 </body>

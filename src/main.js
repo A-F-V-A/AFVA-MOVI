@@ -1,28 +1,28 @@
 import { trendingMovi } from './header.js'
 import { trendingPrew } from './trendingPrew.js'
+import { genreMovi } from './genre.js'
+
+
+// Informacion inicial
 
 trendingMovi()
 trendingPrew()
+genreMovi()
+
+//Interectividad Base
 
 const nav = document.querySelector('nav.nav-main')
 
-window.addEventListener("scroll",()=>{
-    nav.classList.toggle("sticky",window.scrollY > 100)
-})
+window.addEventListener("scroll",() => nav.classList.toggle("sticky",window.scrollY > 100))
 
-const B_prev = document.querySelector('#B_prev')
-const B_next = document.querySelector('#B_next')
-const carousel = document.querySelector('.carousel-container')
+const B_prev = document.querySelector('#B_prev'), B_next = document.querySelector('#B_next')
 
+B_prev.onclick = () => Move()
+B_next.onclick = () => Move(true)
 
-
-
-B_prev.onclick = () => Move(1)
-B_next.onclick = () => Move(2)
-
-
-function Move(value){
-    if(value == 1)
+function Move(value = false){
+    const carousel = document.querySelector('.carousel-container')
+    if(!value)
         carousel.scroll(carousel.scrollLeft - 266,0)
     else
         carousel.scroll(carousel.scrollLeft + 266,0)

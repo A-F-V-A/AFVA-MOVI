@@ -25,6 +25,23 @@ body{
     color: var(--text-color);
 }
 
+body::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar{
+    height: 8px;
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb{
+    border-radius: 30px;
+    background-color: var(--second-bg-color);
+
+    margin: 0;
+    padding: 10px 8px !important;
+}
+
 section.container{
     padding: 120px 15%;
 }
@@ -244,6 +261,8 @@ section.container{
     flex-direction: column;
     width: 250px;
     min-width: 250px;
+    padding: 5px;
+
 }
 
 .box-img{
@@ -304,12 +323,13 @@ section.container{
 
 .carousel{
     width: 100%;
-    height: fit-content;
+    height: 500px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+    transition: all .5s ease;
     
 }
 
@@ -319,9 +339,48 @@ section.container{
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+    height: 100%;
     overflow: auto;
     transition: all .5s ease;
     
 }
 
+.carousel-container::-webkit-scrollbar-track{
+    background-color: transparent;
 
+}
+
+.carousel-container::-webkit-scrollbar{
+    height: 8px;
+    width: 8px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb{
+    border-radius: 30px;
+    background-color: var(--second-bg-color);
+    margin: 0;
+    padding: 10px 8px;
+    cursor: pointer;
+}
+
+.carousel .slick-arrow{
+    width:  30px;
+    height: 30px;
+    border-radius: 50%;
+
+    font-size: 1.2rem;
+    display: grid;
+    place-content: center;
+
+    transition: all .45s ease;
+
+    background-color: var(--second-bg-color);
+    color: var(--color-main);
+}
+
+.carousel .slick-arrow:hover{
+    transform: scale(0.9) ;
+    background-color: var(--color-main);
+    color: var(--second-color);
+    cursor: pointer;
+}

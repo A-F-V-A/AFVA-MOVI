@@ -23,7 +23,7 @@ B_next.onclick = () => Move(2)
 
 function Move(value){
     if(value == 1)
-        carousel.scroll(carousel.scrollLeft - 250,0)
+        carousel.scroll(carousel.scrollLeft - 266,0)
     else
-        carousel.scroll(carousel.scrollLeft + 250,0)
+        carousel.scroll(carousel.scrollLeft + 266,0)
 }

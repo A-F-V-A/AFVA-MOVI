@@ -43,7 +43,7 @@ section.container{
     align-items: center;
     justify-content: space-between;
 
-    padding: 5px 15%;
+    padding: 0px 15%;
     border-bottom:1px solid transparent;
     transition: all .45s ease;
 }
@@ -106,14 +106,10 @@ section.container{
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-
 .nav-main.sticky{
     background: var(--bg-color);
-    border-bottom: 1px solid var(--second-color);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.45);
 }
-
-
-
 
 /* Home */
 .home{
@@ -134,7 +130,7 @@ section.container{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, .33) ;
+    background-color: rgba(0, 0, 0, .5) ;
     z-index: 1;
 }
 
@@ -239,3 +235,93 @@ section.container{
 .btn-round span i:hover{
     transform: scale(1.1) translateY(5px);
 }
+
+
+/* box */
+
+.box-container{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    min-width: 250px;
+}
+
+.box-img{
+    position: relative;
+    height: 360px;
+    background-color: red;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    transition: all .45s ease;
+}
+
+.box-img::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.box-img:hover{
+    transform:  translateY(-10px);
+    cursor: pointer;
+}
+
+.box-text{
+    width: 100%;
+    padding: 10px;
+}
+
+.box-text h4{
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 1.1; 
+}
+
+.box-text .aside{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.aside{
+    font-size: 14px;
+}
+
+.aside span{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.1; 
+}
+
+.box-iconts{
+    cursor: pointer;
+}
+
+.carousel{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    
+}
+
+.carousel-container{
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    overflow: auto;
+    transition: all .5s ease;
+    
+}
+
+

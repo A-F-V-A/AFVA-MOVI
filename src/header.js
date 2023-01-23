@@ -3,6 +3,7 @@ import { api, URL_IMG } from './api.js'
 export async function trendingMovi(){
     const { data } = await api('trending/movie/day')
     const [ trending ] = data.results.sort((a,b) => b.vote_average - a.vote_average)
+   // const  trending  = data.results.sort((a,b) => b.vote_average - a.vote_average)[3]
     homeTrending(trending)
 }
 
@@ -25,6 +26,5 @@ const homeTrending = (movi) =>{
     const src = URL_IMG() + movi.backdrop_path
 
     home.style.backgroundImage = `url(${src})`
-    debugger
 }
 

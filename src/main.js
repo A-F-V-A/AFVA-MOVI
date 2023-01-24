@@ -1,6 +1,7 @@
 import { trendingMovi } from './header.js'
 import { trendingPrew } from './trendingPrew.js'
 import { genreMovi } from './genre.js'
+import { search } from './search.js'
 
 
 // Informacion inicial
@@ -8,6 +9,7 @@ import { genreMovi } from './genre.js'
 trendingMovi()
 trendingPrew()
 genreMovi()
+search()
 
 //Interectividad Base
 

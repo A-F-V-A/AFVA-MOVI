@@ -327,6 +327,15 @@ section.container{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+.trending-text{
+    width: 100%;
+}
+
+.trending-text h2{
+    font-size: var(--big-font);
+    margin-left: 200px;
 }
 
 .carousel{
@@ -410,7 +419,9 @@ section.container{
     justify-content: space-around;
     align-items: center;
 }
-
+.genre-menu h2{
+    font-size: var(--big-font);
+}
 .genre-box{
     width: 100%;
     min-width: 500px;
@@ -419,6 +430,7 @@ section.container{
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    overflow-y: hidden;
     overflow-x: auto;
 }
 
@@ -429,6 +441,12 @@ section.container{
     background-color: #b447eb;
     display: grid;
     place-content: center;
+    transition: all .45s ease;
+}
+
+.genre-box .box:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
 }
 
 .genre-btn{
@@ -483,6 +501,18 @@ section.container{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-position: center;
+    background-size: cover;
+}
+.search::before{
+    position: absolute;
+    content: "";
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background-color: rgba(0, 0, 0, .5) !important;
+    z-index: 1;
 }
 
 .search-banner{
@@ -493,17 +523,17 @@ section.container{
 }
 
 .search-container{
-    width: fit-content;
-    height: fit-content;
+    position: relative;
+    width: 600px;
+    height: 80px;
     display: flex;
-    /* background-color: white; */
-    padding:2px ;
     border-radius: 50px;
     border: 1px solid var(--second-color);
 }
 
 .search-container button{
-    padding: 20px;
+    width: 15%;
+    height: 100%;
     border-radius: 0 50px 50px 0 ;
     border: none;
     background-color: var(--color-main);
@@ -512,9 +542,20 @@ section.container{
 }
 
 .search-container input{
-    background: transparent;
+    width: 85%;
+    height: 100%;
+    padding-left: 1rem;
+    border-radius: 50px 0 0 50px;
     border: none;
-    outline: none!important;
-    padding: 20px 200px;
-    
+    outline: none!important;    
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: var(--text-color);
+    caret-color: var(--color-main);
 }
+
+.search-container input::placeholder{
+    color: var(--text-color);
+    opacity: .2;
+}
+

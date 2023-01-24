@@ -63,10 +63,10 @@
             </div>
             <div class="carousel">
                 <button class="slick-arrow slick-prev" id="B_prev">
-                    <i class='bx bxs-chevron-left' ></i>
+                    <i class='bx bxs-chevron-left'></i>
                 </button>
                 <div class="carousel-container">
-                <!--<div class="box-container">
+                    <!--<div class="box-container">
                         <div class="box-img"></div>
                         <div class="box-text">
                             <h4>Title Mobile</h4>
@@ -83,14 +83,14 @@
                 <button class="slick-arrow slick-next" id="B_next">
                     <i class='bx bxs-chevron-right'></i>
                 </button>
-            </div>              
+            </div>
         </section>
         <section class="genre container" id="genre">
             <div class="genre-menu">
                 <h2>Generos</h2>
                 <div class="genre-btn">
                     <div class="btn-container">
-                        <button >Movies</button>
+                        <button>Movies</button>
                         <button class="left active">Series</button>
                     </div>
                 </div>
@@ -103,16 +103,45 @@
             </div>
         </section>
         <section class="search container" id="search">
-            <div class="search-banner">
-                <div class="search-container">
-                    <input class="I_search" type="text" placeholder="Busca la pelicula">
-                    <button type="button" id="B_search"><i class='bx bx-search-alt-2'></i></button>
+            <div class="search-main">
+                <div class="search-banner">
+                    <div class="search-container">
+                        <input class="I_search" type="text" placeholder="Busca la pelicula">
+                        <button type="button" id="B_search"><i class='bx bx-search-alt-2'></i></button>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.3/axios.min.js" integrity="sha512-L4lHq2JI/GoKsERT8KYa72iCwfSrKYWEyaBxzJeeITM9Lub5vlTj8tufqYk056exhjo2QDEipJrg6zen/DDtoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <footer>
+        <section class="container">
+            <div class="text-main">
+                <h2>Consumo de <span>API REST</span></h2>
+                <p><b>AFVA MOVI</b> permite la nevegacion en la misma pagina sin necesidad de recargar la informacion
+                    cuando
+                    interactuamos con ella, conoce las peliculas en tendencia, interactua para conocer el resumen y
+                    puntuacion de tus peliculas.
+                </p>
+            </div>
+            <div class="logos">
+                <img src="./img/afva-movi.svg" alt="AFVA MOVI">
+                <img src="./img/tm-db.svg" alt="API MOVI DB">
+            </div>
+            <div class="nav-list">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#trending">Tedencia</a></li>
+                <li><a href="#genre">Generos</a></li>
+                <li><a href="#search">Buscar</a></li>
+            </div>
+            <div class="red-social">
+                <i class='bx bxl-github'><a href="https://github.com/A-F-V-A"> Mas proyectos</a></i>
+                <i class='bx bxl-instagram'><a href="https://www.instagram.com/andrespipeva/"> Mi perfil</a></i>
+            </div>
+        </section>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.3/axios.min.js"
+        integrity="sha512-L4lHq2JI/GoKsERT8KYa72iCwfSrKYWEyaBxzJeeITM9Lub5vlTj8tufqYk056exhjo2QDEipJrg6zen/DDtoQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://kit.fontawesome.com/2d97acca8a.js" crossorigin="anonymous"></script>
     <script type="module" src="./src/main.js"></script>
 </body>

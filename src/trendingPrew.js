@@ -2,7 +2,15 @@ import { api, URL_IMG } from './api.js'
 
 const container = document.querySelector('#trending .carousel-container')
 
-function trending ({results:movi}){
+
+function movieOnclick(event){
+    const id_movi = event.target.dataset.id_movi
+    if(event.target.classList.contains('box-img')){
+        location.hash = `#movie=${id_movi}`
+    }
+}
+
+export function trending ({results:movi}){
 
     const HTML = []
     movi.forEach(movi => {
@@ -12,6 +20,7 @@ function trending ({results:movi}){
 
         const boxImg = document.createElement('div')
         boxImg.classList.add('box-img')
+        boxImg.dataset.id_movi = movi.id
         boxImg.style.backgroundImage = `url(${URL_IMG('w300') + movi.poster_path})`
 
         const boxText = document.createElement('div')
@@ -44,13 +53,14 @@ function trending ({results:movi}){
         HTML.push(boxContainer)
         
     })
-   
     return HTML
 
 }
 
 export async function trendingPrew(){
     const { data } = await api('trending/movie/day')
+    container.innerHTML = ''
     container.append(...trending(data))
+    container.addEventListener('click',movieOnclick)
 }
 

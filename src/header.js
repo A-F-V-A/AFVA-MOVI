@@ -10,6 +10,10 @@ export async function trendingMovi(){
 const homeTrending = (movi) =>{
     
     const home = document.querySelector('#home')
+    
+    const btn = document.querySelector('#home .btn')
+
+    btn.href = `#movie=${movi.id}`
 
     const score = document.querySelector('#home .one')  
     score.textContent = movi.vote_average
@@ -27,4 +31,7 @@ const homeTrending = (movi) =>{
 
     home.style.backgroundImage = `url(${src})`
 }
+
+
+
 

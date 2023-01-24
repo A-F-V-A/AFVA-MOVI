@@ -4,7 +4,9 @@ export async function genreMovi(){
     const { data } = await api('genre/movie/list')
     const box = genreDom(data)
     const containerBox = document.querySelector('.genre-box')
+    containerBox.innerHTML = '' //Limpia el contennido
     containerBox.append(...box)
+    containerBox.addEventListener('click',genreOnclick)
 }
 
 function genreDom ({genres:gen}){
@@ -19,4 +21,12 @@ function genreDom ({genres:gen}){
         HTML.push(box)
     }
     return HTML
+}
+
+function genreOnclick (event){
+    const id_genre = event.target.dataset.id_genre
+    const [ name ] = event.target.children
+    if(event.target.classList.contains('box')){
+        location.hash = `#category=${id_genre}-${name.textContent}`
+    }
 }

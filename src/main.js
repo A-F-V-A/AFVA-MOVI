@@ -1,19 +1,20 @@
-import { trendingMovi } from './header.js'
-import { trendingPrew } from './trendingPrew.js'
-import { genreMovi } from './genre.js'
-import { search } from './search.js'
+import { runNav } from './navigation.js'
 
 
 // Informacion inicial
 
-trendingMovi()
-trendingPrew()
-genreMovi()
-search()
+runNav()
 
 //Interectividad Base
 
 const nav = document.querySelector('nav.nav-main')
+
+const B_nav = document.querySelector('.menu-icono')
+
+B_nav.addEventListener('click',() =>{
+    B_nav.classList.toggle('active')
+    document.querySelector('.nav-list').classList.toggle('open')
+})
 
 window.addEventListener("scroll",() => nav.classList.toggle("sticky",window.scrollY > 100))
 

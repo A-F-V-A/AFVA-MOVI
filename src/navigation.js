@@ -1,8 +1,8 @@
 import { trendingMovi } from './header.js'
-import { trendingPrew,trending} from './trendingPrew.js'
+import { trendingPrew, trending, movieOnclick} from './trendingPrew.js'
 import { genreMovi } from './genre.js'
 import { search } from './search.js'
-import { api } from './api.js'
+import { api, URL_IMG } from './api.js'
 
 const main = document.querySelector('main')
 
@@ -28,17 +28,24 @@ async function getMoviesByCategory (id,categoryName) {
             with_genres:id
         },
     })
-    
+    const [ img ] = data.results
     const boxMovi = trending(data)
+    const h2 = document.createElement('h2')
+    h2.textContent = categoryName
     const categoryContainer = document.createElement('div')
     categoryContainer.className = 'generic'
-    categoryContainer.append(...boxMovi)
+    categoryContainer.append(h2,...boxMovi)   
+    document.querySelector('#home').style.backgroundImage = `url(${URL_IMG() + img.backdrop_path})`
     document.querySelector('#home').append(categoryContainer)
+    categoryContainer.addEventListener('click',movieOnclick)
+    window.scroll(0, 0);
 
 }
 
 const home = () =>{
     main.classList.remove('inactive')
+    document.querySelector('#home .home-text').classList.remove('inactive')
+    document.querySelector('.generic')?.remove()
     trendingMovi()
     trendingPrew()
     genreMovi()
@@ -46,7 +53,7 @@ const home = () =>{
 }
 
 const movie = () => {
-    document.querySelector('#home .home-text').classList.remove('inactive')
+    document.querySelector('.generic')?.remove()
     main.classList.add('inactive')
 }
 

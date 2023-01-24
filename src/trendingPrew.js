@@ -3,7 +3,7 @@ import { api, URL_IMG } from './api.js'
 const container = document.querySelector('#trending .carousel-container')
 
 
-function movieOnclick(event){
+export function movieOnclick(event){
     const id_movi = event.target.dataset.id_movi
     if(event.target.classList.contains('box-img')){
         location.hash = `#movie=${id_movi}`

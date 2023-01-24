@@ -46,6 +46,24 @@ section.container{
     padding: 120px 15%;
 }
 
+section > div::-webkit-scrollbar-track{
+    background-color: transparent;
+
+}
+
+section > div::-webkit-scrollbar{
+    height: 8px;
+    width: 8px;
+}
+
+section > div::-webkit-scrollbar-thumb{
+    border-radius: 30px;
+    background-color: var(--second-color);
+    margin: 0;
+    padding: 10px 8px;
+    cursor: pointer;
+}
+
 .inactive{
     display: none!important;
 }
@@ -775,6 +793,21 @@ section .generic{
     display: grid;
     grid-auto-rows: 425px;
     grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+    place-items: center;
     z-index: 2;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
+
+section .generic h2{
+    position: absolute;
+    top: 50px;
+    left: 132px;
+    padding: 8px;
+    background-color: var(--bg-color);
+    border-radius: 24px;
+    border: none;
+    font-size: 1.5rem;
+}
+
+

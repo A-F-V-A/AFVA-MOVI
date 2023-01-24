@@ -5,9 +5,11 @@ export async function genreMovi(){
     const box = genreDom(data)
     const containerBox = document.querySelector('.genre-box')
     containerBox.innerHTML = '' //Limpia el contennido
+
     containerBox.append(...box)
     containerBox.addEventListener('click',genreOnclick)
 }
+
 
 function genreDom ({genres:gen}){
     const HTML = []

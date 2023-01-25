@@ -7,7 +7,7 @@ export async function trendingMovi(){
     homeTrending(trending)
 }
 
-const homeTrending = (movi) =>{
+export const homeTrending = (movi) =>{
     
     const home = document.querySelector('#home')
     

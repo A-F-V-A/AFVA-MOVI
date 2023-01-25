@@ -5,6 +5,8 @@ export async function search(){
     const  trending  = data.results
     searchBanner(trending[random(0,trending.length)])
     btn.addEventListener('click',searchMovi)
+    btnTwo.addEventListener('click',() => searchMovi(true))
+
 }
 
 function searchBanner(movi){
@@ -19,11 +21,19 @@ const random = (min, max) => {
 }
 
 
-function searchMovi(){
-    const nameMovi = document.querySelector('input.I_search')
-    if(nameMovi.value  !== ""){
-        location.hash = `#search=${nameMovi.value}`
-        nameMovi.value = ''
+function searchMovi(active = false){
+    if(!active){
+        const nameMovi = document.querySelector('input.I_search')
+        if(nameMovi.value  !== ""){
+            location.hash = `#search=${nameMovi.value}`
+            nameMovi.value = ''
+        }
+    }else{
+        const nameMovi = document.querySelector('input.I_searchTwo')
+        if(nameMovi.value  !== ""){
+            location.hash = `#search=${nameMovi.value}`
+            nameMovi.value = ''
+        }
     }
     
 }
@@ -31,3 +41,4 @@ function searchMovi(){
 
 
 const btn = document.querySelector('#B_search')
+const btnTwo = document.querySelector('#B_searchTwo')
